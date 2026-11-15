@@ -1,6 +1,6 @@
 # Part Viewer
 
-A browser stage that frames an STL, OBJ, or GLB, then turns it until you drag.
+A browser stage that frames a part and turns it until you drag. Overall width, depth, and height are drawn beside those sides, in millimetres.
 
 ## Run
 
@@ -11,10 +11,10 @@ npm run dev
 
 Open http://localhost:8080
 
+Drop an STL, OBJ, or GLB onto the stage to replace the sample. Dimensions treat the file’s units as millimetres.
+
 ## The viewer
 
-- `src/components/part-stage.tsx` — orbit, auto-spin, wire, section cut
+- `src/components/part-stage.tsx` — orbit, auto-spin, dimension lines
 - `src/lib/load-part.ts` — file loading, centering, studio material
-- `src/routes/index.tsx` — page, file drop, controls
-
-STL and OBJ use the studio plastic. GLB keeps its own materials. Dimensions are in the file’s own units.
+- `src/routes/index.tsx` — the page
